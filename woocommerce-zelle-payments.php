@@ -1,9 +1,11 @@
 <?php
 /**
  * Plugin Name: WooCommerce Zelle Payments
+ * Plugin URI: https://github.com/ryansallen98/woocommerce-zelle-payments
  * Description: Adds Zelle as a manual payment method similar to bank transfer (BACS) to WooCommerce Checkout.
  * Version: 1.0.2
  * Author: Ryan Allen
+ * Author URI: https://github.com/ryansallen98
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit;

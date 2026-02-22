@@ -5,7 +5,7 @@
  * Description: Adds Zelle as a manual payment method similar to bank transfer (BACS) to WooCommerce Checkout.
  * Version: 1.0.2
  * Author: Ryan Allen
- * Author URI: https://github.com/ryansallen98
+ * Author URI: https://rallendev.com
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit;

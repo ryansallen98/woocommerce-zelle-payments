@@ -6,9 +6,27 @@
  * Version: 1.0.2
  * Author: Ryan Allen
  * Author URI: https://rallendev.com
+ * Requires Plugins: woocommerce
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit;
+
+/**
+ * Ensure WooCommerce is active
+ */
+function woocommerce_zelle_payments_require_woocommerce() {
+	if ( ! class_exists( 'WooCommerce' ) ) {
+		add_action( 'admin_notices', function () {
+			echo '<div class="notice notice-error"><p>';
+			echo '<strong>WooCommerce Zelle Payments</strong> requires WooCommerce to be installed and activated.';
+			echo '</p></div>';
+		} );
+
+		// Deactivate plugin
+		deactivate_plugins( plugin_basename( __FILE__ ) );
+	}
+}
+add_action( 'admin_init', 'woocommerce_zelle_payments_require_woocommerce' );
 
 /**
  * Register block script handle early so Woo Blocks dependency graph is satisfied.
